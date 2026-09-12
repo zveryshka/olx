@@ -1,0 +1,38 @@
+:root{
+        --primary-100:#E89E6D;
+    --primary-200:#c88252;
+    --primary-300:#7f4317;
+    --accent-100:#C96A41;
+    --accent-200:#ffffcd;
+    --text-100:#4D4D4D;
+    --text-200:#797979;
+    --bg-100:#F5D7B5;
+    --bg-200:#ebcdab;
+    --bg-300:#c2a685;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-100);
+    color: var(--text-100);
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal form{
+    margin: auto;
+    width: fit-content;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
