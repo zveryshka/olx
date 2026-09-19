@@ -4,8 +4,14 @@ const app = express();
 
 app.use(express.static("static"))
 app.use(express.json())
+app.set("view engine", "ejs")
+app.set("views", "views")
 
 let posts = []
+
+app.get("/", (req, res) => {
+    res.render("index", {posts})
+})
 
 app.post("/add", (req, res) => {
     let data = req.body
@@ -21,6 +27,11 @@ app.get("/posts", (req, res) => {
     res.json(posts)
 })
 
+
+app.use((req, res) => {
+    res.status(404)
+    res.render("notfound")
+})
 
 
 

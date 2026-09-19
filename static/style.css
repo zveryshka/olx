@@ -20,6 +20,10 @@
 body{
     background-color: var(--bg-100);
     color: var(--text-100);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .modal{
@@ -36,3 +40,108 @@ body{
     flex-direction: column;
     gap:0.3rem;
 }
+
+header h1 {
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+header h5{
+    text-align: center;
+}
+
+header{
+    background-color: var(--primary-300);
+    color: var(--text-100);
+}
+
+.wrapper{
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.ad{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid var(--accent-200);
+    background-color: var(--primary-100);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: fit-content;
+}
+
+footer{
+    background-color: var(--primary-100);
+    color: var(--text-200);
+    text-align: center;
+    padding: 1rem;
+}
+
+.open{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.open:hover{
+    opacity: 0.8;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    border:1px solid var(--accent-200);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+form input, form textarea{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.close{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-300);
+    color: var(--accent-200);
+    border: none;
+}
+
+.close:hover{
+    opacity: 0.8;
+}
+
+form textarea{
+    margin-bottom: 0.5rem;
+}
+
+.add-button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-300);
+    color: var(--accent-200);
+    border: none;
+   
+}
+
+.add-button:hover{
+    opacity: 0.8;
+}
+
