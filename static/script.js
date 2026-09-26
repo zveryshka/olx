@@ -6,16 +6,9 @@ document.querySelector(".close").addEventListener("click", () => modal.style.dis
 
 let form = document.querySelector(".modal form").addEventListener("submit", (event) => {
     event.preventDefault();
-    let data = {
-        title: event.target["title"].value,
-        description: event.target["description"].value
-    } 
     fetch("/add", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+        body: new FormData(event.target),
     }).then(()=>location.reload());
 })
 
