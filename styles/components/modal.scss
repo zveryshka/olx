@@ -1,0 +1,54 @@
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+
+    form{
+    margin: auto;
+    width: fit-content;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    background-color: $primary-100;
+    
+
+    input, textarea, .add-button{
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+        background-color: $primary-300;
+        color: $accent-200;
+        
+    }
+
+    .add-button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $primary-300;
+    color: $accent-200;
+    border: none;
+   
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.close{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $primary-300;
+    color: $accent-200;
+    border: none;
+   
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+
+
+
+
+    }
+}
+
