@@ -1,8 +1,13 @@
-@import './base/clearDefault.scss';
-@import './base/color.scss';
-@import './base/typography.scss';
-@import './components/modal.scss';
-@import './components/post.scss';
+@use "./base/mixin" as mixins;
+@use "./base/function" as f;
+
+@import './base/clearDefault';
+@import './base/color';
+@import './base/typography';
+@import './components/modal';
+@import './components/post';
+
+
 
 *{
     margin: 0;
@@ -17,9 +22,13 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    @include mixins.scrolbars();
 }
 
-
+@debug(f.say_hello("ddd"));
+@warn(f.randomColor());
+@error(f.pow(2, 3));
 
 header h1 {
     text-align: center;
@@ -35,6 +44,7 @@ header h5{
 header{
     background-color: $primary-300;
     color: $text-100;
+    @include mixins.transparent-shadow()
 }
 
 .wrapper{
@@ -43,7 +53,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
+    @include mixins.responsive-container();
 }
 
 .ad{
@@ -58,6 +68,18 @@ header{
     padding: 1rem;
     border-radius: 0.5rem;
     height: fit-content;
+
+    img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: center;
+    }
+
+    p{
+        @include mixins.ellipsisText();
+    }
+    @include mixins.removeLinkStyle();
+    
 }
 
 footer{
@@ -65,6 +87,7 @@ footer{
     color: $text-200;
     text-align: center;
     padding: 1rem;
+    @include mixins.transparent-shadow($y : -5px);
 }
 
 .open{
@@ -80,6 +103,10 @@ footer{
 
 .open:hover{
     opacity: 0.8;
+}
+
+main {
+    flex: 1;
 }
 
 form{
